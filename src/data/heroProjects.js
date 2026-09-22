@@ -1,0 +1,48 @@
+const heroProjects = [
+  {
+    id: 'enterprise-automation',
+    number: '01',
+    heroTitle: 'Enterprise Automation',
+    heroCategory: 'Brand / Technology / Automation',
+    coverImage: '/projects/hero/enterprise-automation.png',
+    alt: 'Enterprise automation brand system presented across a warehouse dashboard, robotics, mobile, and RFID hardware',
+    imageWidth: 1672,
+    imageHeight: 941,
+    visualStyle: 'enterprise',
+  },
+  {
+    id: 'retail-wms',
+    number: '02',
+    heroTitle: 'Retail & WMS',
+    heroCategory: 'Product / WMS / Digital',
+    coverImage: '/projects/hero/retail-wms-platform.png',
+    alt: 'Retail warehouse management dashboard shown on a laptop and mobile device in a distribution center',
+    imageWidth: 1672,
+    imageHeight: 941,
+    visualStyle: 'retail',
+  },
+  {
+    id: 'rfid-tracking',
+    number: '03',
+    heroTitle: 'RFID Tracking',
+    heroCategory: 'Product Communication / Tracking',
+    coverImage: '/projects/hero/rfid-tracking-solution.png',
+    alt: 'RFID tracking system with reader, tags, scanner, and live asset interface in a warehouse',
+    imageWidth: 1672,
+    imageHeight: 941,
+    visualStyle: 'rfid',
+  },
+  {
+    id: 'autonomous-robotics',
+    number: '04',
+    heroTitle: 'Autonomous Robotics',
+    heroCategory: 'Robotics / Warehouse Automation',
+    coverImage: '/projects/hero/autonomous-robotics-platform.png',
+    alt: 'Autonomous warehouse robot transporting a pallet through a modern distribution center',
+    imageWidth: 1672,
+    imageHeight: 941,
+    visualStyle: 'robotics',
+  },
+]
+
+export default heroProjects
