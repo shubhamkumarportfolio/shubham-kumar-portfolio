@@ -1,8 +1,8 @@
 const credibilityItems = [
-  { number: '01', value: '5+ Years', label: 'Experience' },
-  { number: '02', value: 'Brand & Campaigns', label: 'Communication' },
-  { number: '03', value: 'Product & Technology', label: 'Storytelling' },
-  { number: '04', value: 'Web & Motion', label: 'Execution' },
+  { number: '01', value: '5+ Years', label: 'Design Experience' },
+  { number: '02', value: 'Brand & Campaign', label: 'Systems' },
+  { number: '03', value: 'Product & Technology', label: 'Communication' },
+  { number: '04', value: 'Web & Motion', label: 'Design' },
 ]
 
 function CredibilityStrip() {

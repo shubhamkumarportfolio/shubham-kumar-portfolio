@@ -10,18 +10,24 @@ function HeroSection() {
       <Container>
         <div className="hero-section__layout">
           <div className="hero-section__content" id="about">
-            <SectionLabel>Brand &amp; Marketing Visual Designer</SectionLabel>
+            <SectionLabel>Designing for Technology-Driven Businesses</SectionLabel>
             <h1 id="hero-heading">
-              I turn complex products into clear visual{' '}
+              I turn complex
+              <br />{' '}
+              products &amp; ideas into
+              <br />{' '}
+              clear visual
+              <br />{' '}
               <span>communication.</span>
             </h1>
             <p className="hero-section__intro">
-              Brand, product and campaign communication for technology-driven businesses.
+              Brand, campaigns, product communication, web and motion for technology-driven businesses.
             </p>
            
             <div className="hero-section__actions">
               <Button href="#work-preview">
-                View Selected Work</Button>
+                View Selected Work
+              </Button>
               <Button href="#contact" variant="secondary">
                 Let’s Connect
               </Button>

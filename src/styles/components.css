@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
-  height: var(--nav-height);
+  height: 5.5rem;
   color: var(--color-dark-text);
-  border-bottom: 1px solid var(--color-dark-border);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-dark-text) 8%, transparent);
   background: var(--color-dark-bg);
 }
 
@@ -50,7 +50,7 @@
 .navbar__nav ul {
   display: flex;
   align-items: center;
-  gap: clamp(1.25rem, 2.7vw, 2.5rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -85,9 +85,12 @@
 }
 
 .navbar__nav a:hover,
-.navbar__nav a:focus-visible,
-.navbar__nav a.navbar__link--active {
+.navbar__nav a:focus-visible {
   color: var(--color-dark-accent);
+}
+
+.navbar__nav a.navbar__link--active {
+  color: var(--color-dark-text);
 }
 
 .navbar__nav a:hover::after,
@@ -162,8 +165,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
   color: var(--color-dark-text);
   border: 1px solid var(--color-dark-border-strong);
@@ -183,6 +186,10 @@
 }
 
 @media (max-width: 56.25rem) {
+  .navbar {
+    height: var(--nav-height);
+  }
+
   .navbar__inner {
     display: flex;
     justify-content: space-between;
@@ -271,9 +278,9 @@
   max-width: 100%;
   margin-top: var(--space-5);
   color: var(--color-text);
-  font-size: clamp(3.25rem, 4.8vw, 4.5rem);
+  font-size: clamp(3.25rem, 4.2vw, 3.75rem);
   font-weight: 650;
-  line-height: 1.08;
+  line-height: 1.04;
   letter-spacing: -0.057em;
 }
 
@@ -336,7 +343,7 @@
   flex-wrap: wrap;
   gap: var(--space-2);
   margin-top: auto;
-  padding-top: 40;
+  padding-top: var(--space-5);
   scroll-margin-top: calc(var(--nav-height) + var(--space-3));
 }
 
@@ -587,6 +594,10 @@
     font-size: clamp(3rem, 5.2vw, 3.5rem);
   }
 
+  .hero-section__content h1 br {
+    display: none;
+  }
+
   .credibility__item {
     padding: var(--space-3);
   }
@@ -604,7 +615,7 @@
   }
 
   .hero-section__content h1 {
-    max-width: 14ch;
+    max-width: 18ch;
     font-size: clamp(3.1rem, 6.5vw, 3.75rem);
   }
 
