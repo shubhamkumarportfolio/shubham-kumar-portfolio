@@ -15,8 +15,9 @@ function SelectedWorkSection() {
 
   <div className="selected-work__headline-row">
     <h2 id="selected-work-heading">
-      Work that turns complexity into clarity
-      <span aria-hidden="true">.</span>
+      Work that turns complexity
+      <br />
+      into <span>clarity.</span>
     </h2>
 
     <div className="selected-work__meta">
