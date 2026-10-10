@@ -10,9 +10,9 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-function Navbar() {
+function Navbar({ homeHref = '#main-content', sectionHrefPrefix = '' }) {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeHref, setActiveHref] = useState('#selected-work')
+  const [activeHref, setActiveHref] = useState(sectionHrefPrefix ? null : '#selected-work')
 
   useEffect(() => {
     const closeOnEscape = (event) => {
@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <Container className="navbar__inner">
-        <a className="navbar__brand" href="#main-content" aria-label="Shubham Kumar, home">
+        <a className="navbar__brand" href={homeHref} aria-label="Shubham Kumar, home">
           <span className="navbar__name">SHUBHAM KUMAR</span>
           <span className="navbar__role">Brand &amp; Marketing Visual Designer</span>
         </a>
@@ -52,7 +52,7 @@ function Navbar() {
                 <li key={item.label}>
                   <a
                     className={activeHref === item.href ? 'navbar__link--active' : undefined}
-                    href={item.href}
+                    href={`${sectionHrefPrefix}${item.href}`}
                     aria-current={activeHref === item.href ? 'location' : undefined}
                     onClick={() => {
                       setActiveHref(item.href)

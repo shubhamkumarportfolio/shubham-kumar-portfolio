@@ -10,6 +10,7 @@ import './styles/capabilities.css'
 import './styles/about.css'
 import './styles/experience.css'
 import './styles/footer.css'
+import './styles/case-study.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
