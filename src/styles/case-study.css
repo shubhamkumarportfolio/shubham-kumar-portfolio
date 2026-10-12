@@ -1,3 +1,9 @@
+.case-study-hero,
+.case-study-context,
+.case-study-challenge {
+  --case-study-section-spacing: var(--space-5);
+}
+
 .case-study-hero {
   color: var(--color-text);
   background: var(--color-bg);
@@ -9,7 +15,7 @@
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(var(--space-4), 4vw, var(--space-8));
   align-items: start;
-  padding-block: var(--space-8) var(--space-10);
+  padding-block: var(--space-8) var(--case-study-section-spacing);
 }
 
 .case-study-hero__content {
@@ -182,7 +188,6 @@
   .case-study-hero__layout {
     grid-template-columns: 1fr;
     gap: var(--space-6);
-    padding-block: var(--space-8);
   }
 
   .case-study-hero__content {
@@ -203,7 +208,7 @@
 @media (max-width: 36rem) {
   .case-study-hero__layout {
     gap: var(--space-5);
-    padding-block: var(--space-6);
+    padding-top: var(--space-6);
   }
 
   .case-study-hero h1 {
@@ -238,7 +243,7 @@
 }
 
 .case-study-context {
-  padding-block: var(--space-12) var(--space-10);
+  padding-block: var(--case-study-section-spacing);
   color: var(--color-text);
   background: var(--color-bg);
 }
@@ -325,10 +330,6 @@
 }
 
 @media (max-width: 52rem) {
-  .case-study-context {
-    padding-block: var(--space-10);
-  }
-
   .case-study-context__text {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -350,10 +351,6 @@
 }
 
 @media (max-width: 36rem) {
-  .case-study-context {
-    padding-block: var(--space-8);
-  }
-
   .case-study-context h2 {
     max-width: 11ch;
     margin-top: var(--space-4);
@@ -367,7 +364,7 @@
 }
 
 .case-study-challenge {
-  padding-block: var(--space-12) var(--space-10);
+  padding-block: var(--case-study-section-spacing);
   color: var(--color-text);
   background: var(--color-bg);
 }
@@ -497,10 +494,6 @@
 }
 
 @media (max-width: 52rem) {
-  .case-study-challenge {
-    padding-block: var(--space-10);
-  }
-
   .case-study-challenge h2 {
     font-size: clamp(3rem, 7.5vw, 3.75rem);
   }
@@ -511,8 +504,10 @@
 }
 
 @media (max-width: 40rem) {
+  .case-study-hero,
+  .case-study-context,
   .case-study-challenge {
-    padding-block: var(--space-8);
+    --case-study-section-spacing: var(--space-4);
   }
 
   .case-study-challenge h2 {
