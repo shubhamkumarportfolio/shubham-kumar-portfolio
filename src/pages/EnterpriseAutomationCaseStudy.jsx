@@ -32,6 +32,62 @@ const challengeItems = [
   },
 ]
 
+const roleAreas = [
+  {
+    number: '01',
+    title: 'Visual Direction',
+    description: 'Defining a cohesive visual language across touchpoints.',
+  },
+  {
+    number: '02',
+    title: 'Product Communication',
+    description: 'Simplifying complex technology through clear visuals.',
+  },
+  {
+    number: '03',
+    title: 'Campaign Design',
+    description: 'Creating high-impact campaigns for product and brand.',
+  },
+  {
+    number: '04',
+    title: 'Digital & Social',
+    description: 'Crafting social content for awareness and engagement.',
+  },
+  {
+    number: '05',
+    title: 'Web & Presentations',
+    description: 'Designing engaging web experiences and presentations.',
+  },
+  {
+    number: '06',
+    title: 'Motion & Video',
+    description: 'Bringing ideas to life with motion and video content.',
+  },
+]
+
+const systemPillars = [
+  {
+    number: '01',
+    title: 'Brand Language',
+    description: 'Typography • Color • Grid • Imagery',
+  },
+  {
+    number: '02',
+    title: 'Product Communication',
+    description: 'RFID • WMS • Robotics • Automation',
+  },
+  {
+    number: '03',
+    title: 'Messaging Hierarchy',
+    description: 'Problem → Solution → Business Value',
+  },
+  {
+    number: '04',
+    title: 'Reusable System',
+    description: 'Campaigns • Web • Sales • Motion',
+  },
+]
+
 function EnterpriseAutomationCaseStudy() {
   return (
     <>
@@ -182,6 +238,98 @@ function EnterpriseAutomationCaseStudy() {
               The solution wasn’t more content. It was <span>a clearer system.</span>
             </p>
           </div>
+        </Container>
+      </section>
+
+      <section
+        className="case-study-role"
+        id="enterprise-automation-role"
+        aria-labelledby="enterprise-automation-role-title"
+      >
+        <Container>
+          <div className="case-study-role__top">
+            <div className="case-study-role__intro">
+              <p className="case-study-role__label">
+                <span>04</span> / MY ROLE
+              </p>
+
+              <h2 id="enterprise-automation-role-title">
+                Turning technical products into
+                <br />
+                <span>clear visual communication.</span>
+              </h2>
+            </div>
+
+            <ol className="case-study-role__grid">
+              {roleAreas.map((item) => (
+                <li className="case-study-role__item" key={item.number}>
+                  <div className="case-study-role__number">
+                    <span>{item.number}</span>
+                    <span aria-hidden="true" />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <figure className="case-study-role__visual">
+            <img
+              src="/projects/enterprise-automation/my-role-showcase.jpg"
+              alt="Enterprise automation communication system shown across digital interfaces, campaign material, presentations and product visuals"
+              width="2048"
+              height="768"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </Container>
+      </section>
+
+      <section
+        className="case-study-system"
+        id="enterprise-automation-system"
+        aria-labelledby="enterprise-automation-system-title"
+      >
+        <Container>
+          <div className="case-study-system__top">
+            <div className="case-study-system__intro">
+              <p className="case-study-system__label">
+                <span>05</span> / THE SYSTEM
+              </p>
+
+              <h2 id="enterprise-automation-system-title">
+                <span className="case-study-system__headline-primary">One visual system.</span>
+                <span className="case-study-system__headline-accent">Built to work</span>
+                <span className="case-study-system__headline-accent">everywhere.</span>
+              </h2>
+            </div>
+
+            <ol className="case-study-system__grid">
+              {systemPillars.map((item) => (
+                <li className="case-study-system__item" key={item.number}>
+                  <div className="case-study-system__number">
+                    <span>{item.number}</span>
+                    <span aria-hidden="true" />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <figure className="case-study-system__visual">
+            <img
+              src="/projects/enterprise-automation/system-showcase.jpg"
+              alt="Enterprise automation visual system showing brand language, product communication, digital interfaces, campaign assets and presentation materials"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </Container>
       </section>
     </>
