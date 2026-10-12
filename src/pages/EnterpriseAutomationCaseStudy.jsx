@@ -8,6 +8,30 @@ const projectMetadata = [
   { label: 'Scope', value: 'Brand communication • Product visuals • Campaigns • Digital' },
 ]
 
+const challengeItems = [
+  {
+    number: '01',
+    title: 'Complex technology',
+    description: 'Multiple products. Too much information.',
+    image: '/projects/enterprise-automation/challenge-complexity.jpg',
+    alt: 'Enterprise automation ecosystem with robotics, RFID and operational software',
+  },
+  {
+    number: '02',
+    title: 'Different audiences',
+    description: 'One solution. Different levels of understanding.',
+    image: '/projects/enterprise-automation/challenge-audiences.jpg',
+    alt: 'Leadership, operations and marketing audiences interacting with enterprise automation',
+  },
+  {
+    number: '03',
+    title: 'Inconsistent touchpoints',
+    description: 'Many formats. No unified visual system.',
+    image: '/projects/enterprise-automation/challenge-touchpoints.jpg',
+    alt: 'Multiple digital and physical communication touchpoints for enterprise automation',
+  },
+]
+
 function EnterpriseAutomationCaseStudy() {
   return (
     <>
@@ -108,6 +132,56 @@ function EnterpriseAutomationCaseStudy() {
               decoding="async"
             />
           </figure>
+        </Container>
+      </section>
+
+      <section
+        className="case-study-challenge"
+        id="enterprise-automation-challenge"
+        aria-labelledby="enterprise-automation-challenge-title"
+      >
+        <Container>
+          <p className="case-study-challenge__label">
+            <span>03</span> / The Challenge
+          </p>
+
+          <h2 id="enterprise-automation-challenge-title">
+            Three things were making
+            <br />
+            the communication <span>harder.</span>
+          </h2>
+
+          <div className="case-study-challenge__grid">
+            {challengeItems.map((item) => (
+              <article className="case-study-challenge__card" key={item.number}>
+                <figure className="case-study-challenge__visual">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+
+                <div className="case-study-challenge__card-content">
+                  <div className="case-study-challenge__number">
+                    <span>{item.number}</span>
+                    <span aria-hidden="true" />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="case-study-challenge__statement">
+            <p>
+              The solution wasn’t more content. It was <span>a clearer system.</span>
+            </p>
+          </div>
         </Container>
       </section>
     </>
