@@ -88,6 +88,45 @@ const systemPillars = [
   },
 ]
 
+const applicationGroups = [
+  {
+    id: 'campaigns',
+    title: 'Campaigns',
+    description: 'Social • Paid Creative • Product Launches',
+    image: '/projects/enterprise-automation/applications-campaigns.jpg',
+    alt: 'Enterprise automation campaign system across social posts, mobile screens, launch creative and large-format advertising',
+    width: 2158,
+    height: 729,
+  },
+  {
+    id: 'product',
+    title: 'Product Communication',
+    description: 'RFID • WMS • Robotics • Automation',
+    image: '/projects/enterprise-automation/applications-product.jpg',
+    alt: 'Enterprise automation product communication across RFID hardware, warehouse software and autonomous robotics',
+    width: 1672,
+    height: 941,
+  },
+  {
+    id: 'sales',
+    title: 'Sales Communication',
+    description: 'Presentations • Brochures • Company Profiles',
+    image: '/projects/enterprise-automation/applications-sales.jpg',
+    alt: 'Enterprise automation sales communication across presentations, brochures and company profiles',
+    width: 1672,
+    height: 941,
+  },
+  {
+    id: 'digital',
+    title: 'Digital & Motion',
+    description: 'Web • Landing Pages • Motion • Video',
+    image: '/projects/enterprise-automation/applications-digital.jpg',
+    alt: 'Enterprise automation digital communication across web, mobile, motion and video formats',
+    width: 2152,
+    height: 731,
+  },
+]
+
 function EnterpriseAutomationCaseStudy() {
   return (
     <>
@@ -330,6 +369,52 @@ function EnterpriseAutomationCaseStudy() {
               decoding="async"
             />
           </figure>
+        </Container>
+      </section>
+
+      <section
+        className="case-study-applications"
+        id="enterprise-automation-applications"
+        aria-labelledby="enterprise-automation-applications-title"
+      >
+        <Container>
+          <p className="case-study-applications__label">
+            <span>06</span> / APPLICATIONS
+          </p>
+
+          <h2 id="enterprise-automation-applications-title">
+            <span>One system.</span>{' '}
+            <span>Many touchpoints.</span>
+          </h2>
+
+          <div className="case-study-applications__grid">
+            {applicationGroups.map((item) => (
+              <article
+                className={`case-study-applications__group case-study-applications__group--${item.id}`}
+                key={item.id}
+              >
+                <div className="case-study-applications__group-heading">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+
+                <figure className="case-study-applications__visual">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </article>
+            ))}
+          </div>
+
+          <p className="case-study-applications__closing">
+            Different formats. One recognizable visual language.
+          </p>
         </Container>
       </section>
     </>
