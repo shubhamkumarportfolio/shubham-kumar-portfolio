@@ -21,7 +21,7 @@ const projects = [
     imageWidth: 1448,
     imageHeight: 1086,
     href: '/work/brand-systems',
-    caseStudyAvailable: false,
+    caseStudyAvailable: true,
   },
   {
     id: 'campaigns-content',

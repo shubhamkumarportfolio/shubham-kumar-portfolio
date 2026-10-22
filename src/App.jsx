@@ -6,6 +6,7 @@ import AboutSection from './sections/AboutSection.jsx'
 import ExperienceSection from './sections/ExperienceSection.jsx'
 import Footer from './components/layout/Footer.jsx'
 import EnterpriseAutomationCaseStudy from './pages/EnterpriseAutomationCaseStudy.jsx'
+import BrandSystemsCaseStudy from './pages/BrandSystemsCaseStudy.jsx'
 
 const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
 
@@ -19,6 +20,20 @@ function App() {
         <Navbar homeHref="/" sectionHrefPrefix="/" />
         <main id="main-content">
           <EnterpriseAutomationCaseStudy />
+        </main>
+      </div>
+    )
+  }
+
+  if (currentPath === '/work/brand-systems') {
+    return (
+      <div className="site-shell">
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
+        <Navbar homeHref="/" sectionHrefPrefix="/" />
+        <main id="main-content">
+          <BrandSystemsCaseStudy />
         </main>
       </div>
     )
