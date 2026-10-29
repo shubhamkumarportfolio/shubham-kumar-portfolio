@@ -33,7 +33,7 @@ const projects = [
     imageWidth: 1448,
     imageHeight: 1086,
     href: '/work/campaigns-content',
-    caseStudyAvailable: false,
+    caseStudyAvailable: true,
   },
   {
     id: 'retail-wms',
